@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="en" class="dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study — Gaurav Dalal</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'light-primary': '#003660',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#1E4D7B',
+        'light-on-primary-container': '#95BEF3',
+        'light-secondary': '#515F74',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#D4E4FC',
+        'light-on-secondary-container': '#57657A',
+        'light-tertiary': '#4D2D00',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#6C4100',
+        'light-on-tertiary-container': '#ECAF68',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FEF9F0',
+        'light-on-background': '#1D1C16',
+        'light-surface': '#FEF9F0',
+        'light-surface-dim': '#DED9D1',
+        'light-surface-bright': '#FEF9F0',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F8F3EA',
+        'light-surface-container': '#F2EDE5',
+        'light-surface-container-high': '#EDE8DF',
+        'light-surface-container-highest': '#E7E2D9',
+        'light-on-surface': '#1D1C16',
+        'light-surface-variant': '#DEE2EC',
+        'light-on-surface-variant': '#42474F',
+        'light-outline': '#737780',
+        'light-outline-variant': '#C2C7D0',
+        'light-inverse-surface': '#32302B',
+        'light-inverse-on-surface': '#F5F0E7',
+        'light-inverse-primary': '#A0CAFF',
+        'light-shadow': '#000000',
+        'light-scrim': '#000000',
+        'dark-primary': '#A0CAFF',
+        'dark-on-primary': '#003259',
+        'dark-primary-container': '#1E4D7B',
+        'dark-on-primary-container': '#95BEF3',
+        'dark-secondary': '#B8C8DF',
+        'dark-on-secondary': '#233144',
+        'dark-secondary-container': '#39485B',
+        'dark-on-secondary-container': '#A7B6CD',
+        'dark-tertiary': '#F9BA72',
+        'dark-on-tertiary': '#482A00',
+        'dark-tertiary-container': '#6C4100',
+        'dark-on-tertiary-container': '#ECAF68',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#15130F',
+        'dark-on-background': '#E7E2D9',
+        'dark-surface': '#15130F',
+        'dark-surface-dim': '#15130F',
+        'dark-surface-bright': '#3B3933',
+        'dark-surface-container-lowest': '#0F0E0A',
+        'dark-surface-container-low': '#1D1C16',
+        'dark-surface-container': '#21201A',
+        'dark-surface-container-high': '#2C2A24',
+        'dark-surface-container-highest': '#36352F',
+        'dark-on-surface': '#E7E2D9',
+        'dark-surface-variant': '#42474F',
+        'dark-on-surface-variant': '#C2C7D0',
+        'dark-outline': '#8C919A',
+        'dark-outline-variant': '#42474F',
+        'dark-inverse-surface': '#E7E2D9',
+        'dark-inverse-on-surface': '#32302B',
+        'dark-inverse-primary': '#356190',
+        'dark-shadow': '#000000',
+        'dark-scrim': '#000000',
+      },
+      borderRadius: {
+        'sm': '2px',
+        'DEFAULT': '4px',
+        'md': '6px',
+        'lg': '8px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '56px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Libre Baskerville"', 'sans-serif'],
+        'headline': ['"IBM Plex Sans"', 'sans-serif'],
+        'title': ['"IBM Plex Sans"', 'sans-serif'],
+        'body': ['"IBM Plex Sans"', 'sans-serif'],
+        'label': ['"IBM Plex Sans"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-xl': ['64px', { lineHeight: '72px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-xl-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['28px', { lineHeight: '36px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['26px', { lineHeight: '34px', letterSpacing: '-0.2px', fontWeight: '400' }],
+        'headline-md': ['20px', { lineHeight: '28px', letterSpacing: '-0.1px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '26px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '24px', fontWeight: '600' }],
+        'body-lg': ['17px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '26px', fontWeight: '400' }],
+        'body-sm': ['14px', { lineHeight: '22px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+        'label-md': ['13px', { lineHeight: '18px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', fontWeight: '500' }],
+        'mono-md': ['14px', { lineHeight: '22px', fontWeight: '400' }],
+        'mono-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '100ms',
+        'surface-enter': '200ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body class="min-h-[1024px] flex flex-col bg-light-surface dark:bg-dark-surface text-light-on-surface dark:text-dark-on-surface font-body antialiased" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+  <!-- Shared Navigation Shell -->
+  <header class="sticky top-0 z-20 bg-light-surface dark:bg-dark-surface border-b border-light-outline-variant dark:border-dark-outline-variant">
+    <div class="max-w-5xl mx-auto px-gutter-lg h-14 flex items-center justify-between gap-gutter-md">
+      <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html" class="font-display text-title-md text-light-on-surface dark:text-dark-on-surface hover:text-light-primary dark:hover:text-dark-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary dark:focus-visible:ring-dark-primary rounded-sm transition-colors duration-state-change">
+        <span data-design-text-token="title-md">Gaurav Dalal</span>
+      </a>
+
+      <div class="flex items-center gap-gutter-lg">
+        <nav aria-label="Primary navigation" class="hidden md:block">
+          <ul data-component-id="list-interactive" data-component-type="list" data-component-variant="interactive" class="flex items-center gap-gutter-lg">
+            <li>
+              <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html#experience" class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant hover:text-light-primary dark:hover:text-dark-primary transition-colors duration-state-change rounded-sm">
+                <span data-design-text-token="label-lg">Experience</span>
+              </a>
+            </li>
+            <li>
+              <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html#projects" aria-current="page" class="font-label text-label-lg text-light-primary dark:text-dark-primary underline underline-offset-4 rounded-sm">
+                <span data-design-text-token="label-lg">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html#skills" class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant hover:text-light-primary dark:hover:text-dark-primary transition-colors duration-state-change rounded-sm">
+                <span data-design-text-token="label-lg">Skills</span>
+              </a>
+            </li>
+            <li>
+              <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html#about" class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant hover:text-light-primary dark:hover:text-dark-primary transition-colors duration-state-change rounded-sm">
+                <span data-design-text-token="label-lg">About</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-gutter-sm md:pl-gutter-sm md:border-l border-light-outline-variant dark:border-dark-outline-variant">
+          <button data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" type="button" class="inline-flex items-center justify-center gap-gutter-xs px-gutter-md py-gutter-xs rounded border border-light-outline-variant dark:border-dark-outline-variant bg-light-surface-container-low dark:bg-dark-surface-container-low text-light-on-surface dark:text-dark-on-surface hover:border-light-primary dark:hover:border-dark-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary dark:focus-visible:ring-dark-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-title-md" aria-hidden="true">description</span>
+            <span data-design-text-token="label-md" class="font-label text-label-md">Resume</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-5xl w-full mx-auto px-gutter-lg py-gutter-xl">
+
+    <!-- Back Breadcrumb -->
+    <div class="mb-gutter-lg">
+      <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html#projects" class="inline-flex items-center gap-gutter-xs font-label text-label-md text-light-primary dark:text-dark-primary hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary dark:focus-visible:ring-dark-primary rounded-sm">
+        <span class="material-symbols-outlined text-title-md" aria-hidden="true">arrow_back</span>
+        <span data-design-text-token="label-md">Back to Selected Projects</span>
+      </a>
+    </div>
+
+    <!-- Case Study Header -->
+    <header class="pb-gutter-xl border-b border-light-outline-variant dark:border-dark-outline-variant flex flex-col gap-gutter-md">
+      <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">ENGINEERING CASE STUDY · 01</span>
+      <h1 data-component-id="typography-display" data-component-type="typography" data-component-variant="display" data-design-text-token="display-lg" class="font-display text-display-lg text-light-on-surface dark:text-dark-on-surface text-balance">[Placeholder: Project Title — e.g., Idempotent Payment Ledger Service]</h1>
+
+      <p data-design-text-token="body-lg" class="font-body text-body-lg text-light-on-surface-variant dark:text-dark-on-surface-variant max-w-prose text-pretty">
+        [Placeholder: One-sentence technical summary of what the system does and the reliability problem it solves.]
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-lg pt-gutter-md border-t border-light-outline-variant dark:border-dark-outline-variant">
+        <div class="md:col-span-4 flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-wider">Technology Stack</span>
+          <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface dark:text-dark-on-surface">Java 17 · Spring Boot · [Placeholder: DB/Queue]</span>
+        </div>
+        <div class="md:col-span-4 flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-wider">Scope &amp; Timeline</span>
+          <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface dark:text-dark-on-surface">[Placeholder: Solo / Team · Month YYYY]</span>
+        </div>
+        <div class="md:col-span-4 flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-sm" class="font-label text-label-sm text-light-on-surface-variant dark:text-dark-on-surface-variant uppercase tracking-wider">Source &amp; Artifacts</span>
+          <div class="flex items-center gap-gutter-md">
+            <a href="https://github.com" class="font-label text-label-md text-light-primary dark:text-dark-primary underline underline-offset-4"><span data-design-text-token="label-md">GitHub Repository</span></a>
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">[Demo: Optional]</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. Problem Statement -->
+    <section class="py-gutter-xl border-b border-light-outline-variant dark:border-dark-outline-variant grid grid-cols-1 md:grid-cols-12 gap-gutter-xl">
+      <div class="md:col-span-4">
+        <h2 data-design-text-token="headline-lg" class="font-display text-headline-lg text-light-on-surface dark:text-dark-on-surface">Problem Statement</h2>
+      </div>
+      <div class="md:col-span-8 flex flex-col gap-gutter-md max-w-prose">
+        <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface text-pretty">
+          [Placeholder: Describe the concrete engineering problem, failure scenarios (e.g., duplicate retries, race conditions, partial failures), and non-functional requirements.]
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. Technical Solution & Evidence Placeholder -->
+    <section class="py-gutter-xl border-b border-light-outline-variant dark:border-dark-outline-variant grid grid-cols-1 md:grid-cols-12 gap-gutter-xl">
+      <div class="md:col-span-4">
+        <h2 data-design-text-token="headline-lg" class="font-display text-headline-lg text-light-on-surface dark:text-dark-on-surface">Technical Solution</h2>
+      </div>
+      <div class="md:col-span-8 flex flex-col gap-gutter-lg">
+        <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface dark:text-dark-on-surface max-w-prose text-pretty">
+          [Placeholder: Walk through the end-to-end request lifecycle, Spring Boot service boundaries, and persistence strategy.]
+        </p>
+
+        <div class="p-gutter-lg rounded border border-dashed border-light-outline dark:border-dark-outline bg-light-surface-container-low dark:bg-dark-surface-container-low flex flex-col gap-gutter-xs">
+          <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-primary dark:text-dark-primary">[Placeholder: Verified Architecture Diagram or Sequence Diagram]</span>
+          <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant text-pretty">
+            Insert only an actual, verified system diagram, API specification, or database schema once the project details are finalized.
+          </p>
+        </div>
+
+        <div class="rounded border border-light-outline-variant dark:border-dark-outline-variant bg-light-surface-container-low dark:bg-dark-surface-container-low overflow-hidden">
+          <div class="px-gutter-md py-gutter-xs border-b border-light-outline-variant dark:border-dark-outline-variant flex items-center justify-between">
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">schema-or-endpoint.sql</span>
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Editable Snippet</span>
+          </div>
+          <pre class="p-gutter-md font-mono text-mono-sm text-light-on-surface dark:text-dark-on-surface overflow-x-auto"><code>-- [Placeholder: Replace with actual DDL, API contract, or Spring Boot config]
+CREATE TABLE idempotency_records (
+  idempotency_key VARCHAR(64) PRIMARY KEY,
+  request_hash    CHAR(64) NOT NULL,
+  status          VARCHAR(24) NOT NULL,
+  created_at      TIMESTAMP NOT NULL
+);</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Design Decisions & Trade-offs -->
+    <section class="py-gutter-xl border-b border-light-outline-variant dark:border-dark-outline-variant grid grid-cols-1 md:grid-cols-12 gap-gutter-xl">
+      <div class="md:col-span-4">
+        <h2 data-design-text-token="headline-lg" class="font-display text-headline-lg text-light-on-surface dark:text-dark-on-surface">Design Decisions</h2>
+      </div>
+      <div class="md:col-span-8 flex flex-col gap-gutter-lg">
+        <div class="overflow-x-auto border border-light-outline-variant dark:border-dark-outline-variant rounded">
+          <table class="w-full text-left border-collapse">
+            <thead>
+              <tr class="border-b border-light-outline-variant dark:border-dark-outline-variant bg-light-surface-container-low dark:bg-dark-surface-container-low">
+                <th class="px-gutter-md py-gutter-sm font-label text-label-md text-light-on-surface dark:text-dark-on-surface">Decision Area</th>
+                <th class="px-gutter-md py-gutter-sm font-label text-label-md text-light-on-surface dark:text-dark-on-surface">Chosen Approach</th>
+                <th class="px-gutter-md py-gutter-sm font-label text-label-md text-light-on-surface dark:text-dark-on-surface">Trade-off Accepted</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-light-outline-variant dark:divide-dark-outline-variant">
+              <tr>
+                <td class="px-gutter-md py-gutter-sm font-mono text-mono-sm text-light-on-surface dark:text-dark-on-surface align-top">[Placeholder: Concurrency]</td>
+                <td class="px-gutter-md py-gutter-sm font-body text-body-sm text-light-on-surface dark:text-dark-on-surface align-top">[Placeholder: Optimistic locking / DB unique constraint]</td>
+                <td class="px-gutter-md py-gutter-sm font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant align-top">[Placeholder: Requires retry handling on conflict]</td>
+              </tr>
+              <tr>
+                <td class="px-gutter-md py-gutter-sm font-mono text-mono-sm text-light-on-surface dark:text-dark-on-surface align-top">[Placeholder: Messaging]</td>
+                <td class="px-gutter-md py-gutter-sm font-body text-body-sm text-light-on-surface dark:text-dark-on-surface align-top">[Placeholder: Outbox pattern / async consumer]</td>
+                <td class="px-gutter-md py-gutter-sm font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant align-top">[Placeholder: Eventual consistency window]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Implementation Challenges & Testing -->
+    <section class="py-gutter-xl grid grid-cols-1 md:grid-cols-12 gap-gutter-xl">
+      <div class="md:col-span-4">
+        <h2 data-design-text-token="headline-lg" class="font-display text-headline-lg text-light-on-surface dark:text-dark-on-surface">Reliability &amp; Testing</h2>
+      </div>
+      <div class="md:col-span-8 flex flex-col gap-gutter-md">
+        <div data-component-id="accordion-group" data-component-type="accordion" data-component-variant="group" class="flex flex-col divide-y divide-light-outline-variant dark:divide-dark-outline-variant border border-light-outline-variant dark:border-dark-outline-variant rounded bg-light-surface-container-low dark:bg-dark-surface-container-low">
+          <details class="group" open>
+            <summary class="flex items-center justify-between gap-gutter-md px-gutter-md py-gutter-sm cursor-pointer list-none select-none text-light-on-surface dark:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change">
+              <span data-design-text-token="title-md" class="font-title text-title-md">Implementation challenges</span>
+              <span class="material-symbols-outlined text-title-md text-light-on-surface-variant dark:text-dark-on-surface-variant transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="px-gutter-md pb-gutter-md pt-gutter-sm">
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant text-pretty">
+                [Placeholder: Specific edge cases, timeout tuning, connection pool saturation, or serialization issues encountered and resolved.]
+              </p>
+            </div>
+          </details>
+
+          <details class="group" open>
+            <summary class="flex items-center justify-between gap-gutter-md px-gutter-md py-gutter-sm cursor-pointer list-none select-none text-light-on-surface dark:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change">
+              <span data-design-text-token="title-md" class="font-title text-title-md">Testing &amp; reliability considerations</span>
+              <span class="material-symbols-outlined text-title-md text-light-on-surface-variant dark:text-dark-on-surface-variant transition-transform duration-state-change group-open:rotate-180" aria-hidden="true">expand_more</span>
+            </summary>
+            <div class="px-gutter-md pb-gutter-md pt-gutter-sm">
+              <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant dark:text-dark-on-surface-variant text-pretty">
+                [Placeholder: JUnit 5 unit tests, Testcontainers integration tests, structured logging, health checks, and verified benchmark results if available.]
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-light-outline-variant dark:border-dark-outline-variant">
+    <div class="max-w-5xl mx-auto px-gutter-lg py-gutter-lg flex items-center justify-between gap-gutter-md">
+      <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant">Gaurav Dalal · Backend Software Engineer</span>
+      <a href="../portfolio-home-desktop/PortfolioHomeDesktop.html" class="font-label text-label-md text-light-primary dark:text-dark-primary underline underline-offset-4">
+        <span data-design-text-token="label-md">Return to Portfolio</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('case-theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        const icon = toggleBtn.querySelector('.material-symbols-outlined');
+        if (icon) icon.textContent = isDark ? 'light_mode' : 'dark_mode';
+      });
+    }
+  </script>
+
+
+</body></html>
